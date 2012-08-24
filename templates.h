@@ -52,4 +52,22 @@ void generateMatrix(T m[MAX][MAX], int &f, int &c){
       return;
 }
 
+/*!
+ * this is iqual to vector.push_back(t)
+ * instead, its used in this way
+ * vector << t;
+ */
+template <class T>
+std::vector<T>& operator<<(std::vector<T> &t, T b){
+    t.push_back(b);
+    return t;
+}
+
+template<class T>
+std::ostream& operator<<(std::ostream&o, std::vector<T> _v){
+  for(T &t : _v) {
+    std::cout << t << std::endl;
+  }
+}
+
 #endif

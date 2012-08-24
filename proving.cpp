@@ -1,9 +1,10 @@
 #include "proving.h"
+#include "cdebug.h"
 using namespace std;
 
 Proving::Proving(double a)
 {
-  _value = a;
+  this->setValue(a);
 }
 
 double Proving::getValue() const
@@ -13,6 +14,7 @@ double Proving::getValue() const
 
 void Proving::setValue(double a)
 {
+  DEBUG << "Valor: " << a;
   _value = a;
 }
 

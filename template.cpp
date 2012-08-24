@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 #include "cdebug.h"
 #include "templates.h"
 #include "proving.h"
@@ -22,5 +23,17 @@ int main(){
   int f_char, c_char;
   generateMatrix(m_char, f_char, c_char);
   showMatrix(m_char, f_char, c_char);
+  
+  vector<Proving> vec;
+  //Proving *p;
+  for(int i=0; i<5; i++){
+    //p = new Proving(-1 * i);
+    vec.push_back(Proving(-1 * i));
+    //vec.at(i) << p;
+  }
+  
+  cout << "El vector (0, -1, -2, -3, -4):\n";
+  cout << vec;
+  
   return 0;
 }
