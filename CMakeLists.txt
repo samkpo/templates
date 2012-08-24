@@ -8,7 +8,8 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -std=c++11")
 #set libraries
 #===================================
 add_library(cdebug SHARED debug.cpp)
-set(LIBS cdebug)
+add_library(proving SHARED proving.cpp)
+set(LIBS cdebug proving)
 
 #===================================
 #app

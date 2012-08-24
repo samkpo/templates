@@ -1,63 +1,18 @@
 #include <iostream>
 #include <iomanip>
 #include "cdebug.h"
+#include "templates.h"
+#include "proving.h"
+
 using namespace std;
-
-#define MAX 100
-
-/*!
- * \fn void showMatrix(T m[MAX][MAX], int f, int c)
- * 
- * Function used to show a matrix \a m of \a f rows and \a c columns
- */
-template<class T>
-void showMatrix(T m[MAX][MAX], int f, int c){
-  //utilidad para mostrar la matriz de fomra mas "bonita"
-  cout<<"   ";
-  for(int i=0; i<f; i++){
-    cout<<setw(4)<<i+1<<" ";
-  }cout<<endl<<"   ";
-  for(int i=0; i<f; i++){
-    cout<<setw(4)<<"---"<<" ";
-  }cout<<endl;
-  for(int i=0;i<f;i++)
-  {
-    cout<<i+1<<" |";
-    for( int j=0;j<f;j++)
-    {
-      cout<<setw(4)<<m[i][j]<<" ";
-    }
-    cout<<endl;
-  }
-  cout<<endl;
-}
-
-/*!
- * \fn void generateMatrix(T m[MAX][MAX], int &f, int &c)
- * 
- * Generate a matrix (2-dimentional array) , saving it in \a m,
- * with \a f rows (f comes from filas in spanish) and \a c columns
- */
-template<class T>
-void generateMatrix(T m[MAX][MAX], int &f, int &c){
-  cout << "Ingrese numero de filas: ";
-  cin >> f;
-  cout << "Ingrese numero de columnas: ";
-  cin >> c;
-  
-  for(int i=0; i<f; i++){
-    for(int j=0; j<f; j++){
-      cout<<"Ingrese el elemento ["<<i+1<<setw(3)<<j+1<<"]: ";
-      cin>>m[i][j];}}
-      return;
-}
 
 int main(){
   //saludo :-P
   cout << "Hello\n";
   
+  LOG << "Hello 2";
+  
   //matriz de enteros
-  DEBUG << "Hello 2";
   int m_int[MAX][MAX], f_int, c_int;
   generateMatrix(m_int, f_int, c_int);
   showMatrix(m_int, f_int, c_int);
