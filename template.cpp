@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include "cdebug.h"
 using namespace std;
 
 #define MAX 100
@@ -56,6 +57,7 @@ int main(){
   cout << "Hello\n";
   
   //matriz de enteros
+  DEBUG << "Hello 2";
   int m_int[MAX][MAX], f_int, c_int;
   generateMatrix(m_int, f_int, c_int);
   showMatrix(m_int, f_int, c_int);
