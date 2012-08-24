@@ -15,6 +15,3 @@ set(LIBS cdebug)
 #===================================
 add_executable(template template.cpp)
 target_link_libraries(template ${LIBS})
-
-# add_executable(sensor sensor.cpp)
-# target_link_libraries(sensor ${LIBS})
