@@ -31,6 +31,12 @@ void showMatrix(T m[MAX][MAX], int f, int c){
   cout<<endl;
 }
 
+/*!
+ * \fn void generateMatrix(T m[MAX][MAX], int &f, int &c)
+ * 
+ * Generate a matrix (2-dimentional array) , saving it in \a m,
+ * with \a f rows (f comes from filas in spanish) and \a c columns
+ */
 template<class T>
 void generateMatrix(T m[MAX][MAX], int &f, int &c){
   cout << "Ingrese numero de filas: ";
